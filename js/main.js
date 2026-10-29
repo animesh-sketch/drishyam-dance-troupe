@@ -105,7 +105,11 @@
     <button type="button" class="g-item media reveal ${esc(g.size || "")}" style="--d:${(i % 4) * 0.08}s" data-i="${i}" data-label="${esc(g.src)}" aria-label="View ${esc(g.caption || "photo")}">
       <div class="zoom"></div><span class="g-item__cap">${esc(g.caption || "")}</span>
     </button>`).join("");
-  $$(".g-item").forEach((el) => setMedia(el, C.gallery[+el.dataset.i].src, $(".zoom", el), +el.dataset.i));
+  $$(".g-item").forEach((el) => {
+    const g = C.gallery[+el.dataset.i];
+    if (g.pos) $(".zoom", el).style.backgroundPosition = g.pos;
+    setMedia(el, g.src, $(".zoom", el), +el.dataset.i);
+  });
 
   /* ---------- Section images ---------- */
   $$("[data-img]").forEach((el, i) => setMedia(el, C.images[el.dataset.img], el, i));

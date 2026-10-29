@@ -526,3 +526,15 @@ body.loaded .reveal-up { opacity: 1; transform: none; }
   .nav__mark { font-size: 20px; letter-spacing: .26em; }
   .nav__bn { display: none; }
 }
+.g-item.big { grid-column: span 2; grid-row: span 2; }
+.g-item.tall .zoom, .g-item.big .zoom { background-position: center 30%; }
+.hero__media.has-img { background-position: center 35%; }
+.join__media.has-img { background-position: center 60%; }
+.hero:has(.hero__media.has-img) .hero__veil {
+  background:
+    linear-gradient(180deg, rgba(11,10,9,.62) 0%, rgba(11,10,9,.2) 28%, rgba(11,10,9,.5) 62%, var(--black) 100%),
+    linear-gradient(90deg, rgba(11,10,9,.82) 0%, rgba(11,10,9,.45) 50%, rgba(11,10,9,.1) 85%);
+}
+.hero:has(.hero__media.has-img) .hero__title { text-shadow: 0 4px 40px rgba(0,0,0,.45); }
+.hero:has(.hero__media.has-img) .hero__text { color: rgba(243,236,224,.86); }
+.join:has(.join__media.has-img) .join__veil { background: radial-gradient(75% 85% at 50% 50%, rgba(11,10,9,.74), rgba(11,10,9,.9)); }

@@ -98,14 +98,13 @@ window.DRISHYAM = {
     { title: "Tongue Twister Pt. 2", latin: "Bengali Group Content", type: "Group Content", text: "Playful, rhythmic Bengali group content: wit and timing set in motion.", image: "assets/images/perf-tongue-twister.jpg", youtubeId: "", link: "" }
   ],
 
-  // Gallery: add as many as you like. `size` = "tall" | "wide" | "" (normal)
+  // Gallery: add as many as you like. `size` = "big" (2x2) | "tall" | "wide" | "" (normal)
+  // optional `pos` = CSS background-position to keep faces in frame, e.g. "center 70%"
   gallery: [
-    { src: "assets/images/gallery-1.jpg", caption: "On stage", size: "tall" },
-    { src: "assets/images/gallery-2.jpg", caption: "Rehearsal", size: "" },
-    { src: "assets/images/gallery-3.jpg", caption: "Ensemble", size: "wide" },
-    { src: "assets/images/gallery-4.jpg", caption: "Expression", size: "" },
-    { src: "assets/images/gallery-5.jpg", caption: "Backstage", size: "tall" },
-    { src: "assets/images/gallery-6.jpg", caption: "Formation", size: "" },
-    { src: "assets/images/gallery-7.jpg", caption: "Celebration", size: "wide" }
+    { src: "assets/images/gallery-1.jpg", caption: "On stage", size: "big" },
+    { src: "assets/images/gallery-2.jpg", caption: "Formation", size: "tall", pos: "center 70%" },
+    { src: "assets/images/gallery-3.jpg", caption: "Durga Puja", size: "tall", pos: "center 85%" },
+    { src: "assets/images/gallery-4.jpg", caption: "Stage production", size: "wide" },
+    { src: "assets/images/gallery-5.jpg", caption: "Ensemble", size: "wide" }
   ]
 };
