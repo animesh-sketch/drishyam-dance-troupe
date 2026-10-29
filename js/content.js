@@ -21,7 +21,7 @@ window.DRISHYAM = {
     email: "",
     phone: "+91 98744 99390",
     whatsapp: "919874499390", // digits only, with country code. Enquiry form sends here.
-    location: ""
+    location: "18/22 Fern Road, Kolkata 700019"
   },
 
   // Show small "add photo" hints on placeholders (set false before launch)

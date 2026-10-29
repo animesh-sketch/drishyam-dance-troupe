@@ -118,7 +118,7 @@
     { k: "YouTube", v: "Drishyam Dance Troupe", href: b.youtube },
     b.email && { k: "Email", v: b.email, href: `mailto:${b.email}` },
     b.phone && { k: "Phone", v: b.phone, href: `tel:${b.phone.replace(/\s/g, "")}` },
-    b.location && { k: "Based in", v: b.location }
+    b.location && { k: "Address", v: b.location, href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(b.location)}` }
   ].filter(Boolean);
   $("#channels").innerHTML = channels.map((c) => c.href
     ? `<li><a href="${esc(c.href)}" ${c.href.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}><span><small>${esc(c.k)}</small><strong>${esc(c.v)}</strong></span><span>↗</span></a></li>`
