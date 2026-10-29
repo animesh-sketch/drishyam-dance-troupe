@@ -51,7 +51,7 @@ def build_page(mtime: float) -> str:
     html = html.replace('<link rel="stylesheet" href="css/styles.css" />', f"<style>{css}</style>")
     html = html.replace('<script src="js/content.js"></script>', f"<script>{content}</script>")
     html = html.replace('<script src="js/main.js"></script>', f"<script>{main}</script>")
-    html = html.replace('href="assets/favicon.svg"', f'href="{data_uri(ROOT / "assets/favicon.svg")}"')
+    html = inline_assets(html)
     return html
 
 
